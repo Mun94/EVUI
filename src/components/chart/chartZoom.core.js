@@ -162,9 +162,9 @@ export default class EvChartZoom {
       if (newZoomStartIdx === newZoomEndIdx) {
         // drag 영역에 한 포인트만 있을 경우
         if (newDragStartAxesX - dragXsp >= dragXep - newDragStartAxesX) {
-            newZoomStartIdx -= 1;
+          newZoomStartIdx -= 1;
         } else {
-            newZoomEndIdx += 1;
+          newZoomEndIdx += 1;
         }
       }
 
@@ -438,7 +438,7 @@ export default class EvChartZoom {
       }
     };
 
-    if (isUseZoomMode) {
+    if (isUseZoomMode && this.dragZoomIcon.classList.contains('active')) {
       const { previous, latest } = this.zoomAreaMemory;
 
       toggleIconStyle(this.previousIcon, previous.length);
